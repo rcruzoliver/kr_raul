@@ -78,31 +78,24 @@
               <inertial mass="1.219" pos="0 0.127 0" diaginertia="0.0025599 0.0025599 0.0021942"/>
               <joint name="joint4" class="size1" axis="0 1 0"/>
               <geom mesh="a810_Link5" material="black" class="visual" pos="0.0 0.085 0.000" quat="0.5 -0.5 -0.5 0.5"/>
-              <geom type="cylinder" size="0.015 0.075" pos="0 -0.01 0" euler="1.570796326795 0 0" material="orange"/>
+              <geom type="cylinder" size="0.015 0.075" pos="0 0.0238 0" euler="1.570796326795 0 0" material="orange"/>
               <!-- <geom class="collision" pos="0 0.05 0" quat="1 1 0 0" size="0.04 0.07"/> -->
               <body name="link6" pos="-0.04 0.085 0.331" quat="1 0 0 0">
                 <inertial mass="1.219" pos="0 0 0.1" diaginertia="0.0025599 0.0025599 0.0021942"/>
                 <joint name="joint5" axis="0 0 1" class="size1"/>
                 <geom mesh="a810_Link6" material="urblue" class="visual" pos="0 0.001 0.047" quat="0.7071068 0 0 -0.7071068"/>
                 <!-- <geom class="collision" size="0.04 0.06" pos="0 0 0.04"/> -->
-                <body name="link7" pos="0 0 0.5" quat="1 0 0 0">
+                <body name="link7" pos="0 0.05 0.047" quat="1 0 0 0">
                   <inertial mass="0.1889" pos="0 0.0771683 0" quat="1 0 0 1" diaginertia="0.000132134 9.90863e-05 9.90863e-05"/>
-                  <joint name="joint6" class="size1"/>
-                  <geom mesh="a810_Link7" material="black" class="visual" quat="1 0 0 0"/>
+                  <joint name="joint6" class="size1" axis="0 1 0"/>
+                  <geom mesh="a810_Link7" material="black" class="visual" pos="0 0.06 0.0" quat="1 0 0 0"/>
                   <!-- <geom class="collision" size="0.04 0.06" pos="0 0 0.04"/> -->
-                  <body name="toolIO" pos="0 0 0.5">
+                  <body name="toolIO" pos="0 0.06 0.05">
                   	<inertial mass="0.1889" pos="0 0.0771683 0" quat="1 0 0 1" diaginertia="0.000132134 9.90863e-05 9.90863e-05"/>
-                    <joint name="joint7" class="size1"/>
-                    <geom mesh="a810_ToolIO" material="black" class="visual"/>
-                    <!-- end effector -->
+                    <joint name="joint7" class="size1" axis="0 0 1"/>
+                    <geom mesh="a810_ToolIO" material="urblue" class="visual" pos="0 0 0.057" quat="1 0 0 0"/>
                     <!-- <geom class="eef_collision" pos="0 0.08 0" quat="1 1 0 0" size="0.04 0.02"/> -->
                     <site name="attachment_site" pos="0 0.1 0" quat="-1 1 0 0"/>
-                    <body name="end_effector" pos="0 0.1 0" quat="1 0 0 0">
-                      <geom type="cylinder" name="end_effector" size="0.03 0.05" rgba="0.7 0.2 0.2 1" pos="0 0.05 0" quat="0.7071068 0.7071068 0 0" mass="0" solimp="0.9 0.95 0.001 0.5 2" solref="0.000002 1"/> <!-- size : radius, half_lenght ; pos : relative to body, pos of center of cylinder -->
-                      <site name="ft_sensor" pos="0 0 0"/>
-                      <site name="tip" pos="0 0.10 0"/>
-                      <!-- <body name="tip_body" pos="0 0.10 0" /> for visualization -->
-                    </body>
                   </body>
                 </body>
               </body>
