@@ -22,7 +22,7 @@
         <geom type="mesh" contype="0" conaffinity="0" group="2" />
       </default>
       <default class="collision">
-        <geom type="capsule" group="3" />
+        <geom type="capsule" group="2" />
         <default class="eef_collision">
           <geom type="cylinder" />
         </default>
@@ -63,38 +63,39 @@
         <joint name="joint1" class="size3" axis="0 0 1"/> <!-- base to link2 -->
         <geom mesh="a810_Link2" material="urblue" class="visual" pos = "0 0 0.169"/>
         <geom type="cylinder" size="0.015 0.075" pos="0.05 -0.01 0.275" euler="1.570796326795 0 0" material="orange"/>
-        <!-- <geom class="collision" size="0.06 0.06" pos="0 0 -0.04"/> -->
+        <geom class="collision" size="0.07 0.07" pos="0 0 0.10"/>
         <body name="link3" pos="0.05 0.0 0.275" quat="1 0 0 0"> 
           <inertial mass="6.53" pos="-0.015 -0.09 0.105" quat="0.99915 0 -0.1305 0" diaginertia="0.05 0.05 0.008"/>
           <joint name="joint2" class="size3" axis="0 1 0"/> <!-- link2 to link3 -->
           <geom mesh="a810_Link3" material="black" class="visual" pos="-0.000 -0.085 0.00" quat="0.5 -0.5 0.5 -0.5"/> 
-          <!-- <geom class="collision" pos="0 -0.04 0" quat="1 1 0 0" size="0.06 0.06"/> -->
+          <geom class="collision" pos="0 -0.04 0" quat="1 1 0 0" size="0.065 0.06"/>
           <body name="link4" pos="-0.05 -0.085 0.25">
             <inertial mass="2.9" pos="0.015 0 0.10" quat="0.99915 0 0.1305 0" diaginertia="0.015 0.015 0.005"/>
             <joint name="joint3" class="size3_limited" axis="0 0 1"/> <!-- link3 to link4 -->
             <geom mesh="a810_Link4" material="urblue" class="visual" pos="-0.049 +0.000 0.339" quat="0.5 0.5 -0.5 -0.5"/>
-            <!-- <geom class="collision" pos="0 0.08 0" quat="1 1 0 0" size="0.055 0.06"/> -->
+            <geom class="collision" pos="0 0.00 0" quat="1 0 0 0" size="0.049 0.18"/>
             <body name="link5" pos="0.041 0 0.173" quat="1 0 0 0">
               <inertial mass="6.13" pos="-0.02 +0.09 0.15" quat="0.99915 0 -0.08 0" diaginertia="0.07 0.07 0.005"/>
               <joint name="joint4" class="size1" axis="0 1 0"/>
               <geom mesh="a810_Link5" material="black" class="visual" pos="0.0 0.085 0.000" quat="0.5 -0.5 -0.5 0.5"/>
               <geom type="cylinder" size="0.015 0.075" pos="0 0.0238 0" euler="1.570796326795 0 0" material="orange"/>
-              <!-- <geom class="collision" pos="0 0.05 0" quat="1 1 0 0" size="0.04 0.07"/> -->
+              <geom class="collision" pos="0 0.04 0" quat="1 1 0 0" size="0.052 0.06"/>
               <body name="link6" pos="-0.04 0.085 0.331" quat="1 0 0 0">
                 <inertial mass="1.6" pos="0 0. 0.05" diaginertia="0.005 0.001 0.005"/>
                 <joint name="joint5" axis="0 0 1" class="size1"/>
                 <geom mesh="a810_Link6" material="urblue" class="visual" pos="0 0.001 0.047" quat="0.7071068 0 0 -0.7071068"/>
-                <!-- <geom class="collision" size="0.04 0.06" pos="0 0 0.04"/> -->
+                <geom class="collision" size="0.045 0.14" pos="0 0 -0.10"/>
+                <geom class="collision" size="0.041 0.065" pos="0 0 0.047" quat="1 1 0 0"/>
                 <body name="link7" pos="0 0.05 0.047" quat="1 0 0 0">
                   <inertial mass="1.6" pos="0 0.06 -0.02" quat="1 0 0 1" diaginertia="0.003 0.003 0.001"/>
                   <joint name="joint6" class="size1" axis="0 1 0"/>
                   <geom mesh="a810_Link7" material="black" class="visual" pos="0 0.06 0.0" quat="1 0 0 0"/>
-                  <!-- <geom class="collision" size="0.04 0.06" pos="0 0 0.04"/> -->
-                  <body name="toolIO" pos="0 0.06 0.06">
+                  <geom class="collision" size="0.041 0.055" pos="0 0.06 -0.01"/>
+                  <body name="toolIO" pos="0 0.06 0.050">
                   	<inertial mass="0.56" pos="0 0 0.02" quat="1 0 0 1" diaginertia="0.0004 0.0004 0.0005"/>
                     <joint name="joint7" class="size1" axis="0 0 1"/>
                     <geom mesh="a810_ToolIO" material="urblue" class="visual" pos="0 0 0.057" quat="1 0 0 0"/>
-                    <!-- <geom class="eef_collision" pos="0 0.08 0" quat="1 1 0 0" size="0.04 0.02"/> -->
+                    <geom class="eef_collision" pos="0 0.0 0.032" quat="1 0 0 0" size="0.041 0.023"/>
                     <site name="attachment_site" pos="0 0.1 0" quat="-1 1 0 0"/>
                   </body>
                 </body>
